@@ -1,0 +1,77 @@
+﻿
+@model IEnumerable<fbfinal.Models.Friends>
+           @{ ViewBag.title = "Login2";
+              
+           }
+                                        
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <title></title>
+        <!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+        <!-- <link rel="stylesheet" type="text/css" href="../../Content/css/bootstrap.css" />-->
+        <link href="../../content/boostrap/bootstrap.css" rel="stylesheet" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>`
+
+
+        <script src="~/content/script/JavaScript1.js"></script>
+        <script src="~/content/script/Aprnd2.js"></script>
+        <script src="~/content/script/JavaScript3.js"></script>
+        
+    </head>
+    <body>
+     
+              
+        <div class="container-fluied">
+            <div class="row">
+                <div class="col-md-12" style="background-color:Blue; height: 80px; ">
+                    <div>
+                        <input type="text" name="srchterm" class="X_Firstname1" placeholder="Search Facebook" style="margin-left:60px; margin-top:20px; width:350px; height:28px;" /><input type="submit" value="S" name="cmd1" style="height:27px; color:Silver;" class="icon-search" id="srh" />
+                        <!--<input type="text"  name="srchterm" class="serch" /> <input type="submit" value="s" name= "cmd" style="height:29px; color:Silver;"  class="icon-search" id="srh" onclick="srh_onclick()"/>!--><!--<input class="form-control" name="srchterm" placeholder="Search Facebook"  type="text" style="margin-left:60px; margin-top:20px; width:402px; height:28px;">-->
+
+                        <img src="@ViewData["profile"]" style="margin-left:400px;margin-top:10px; height: 49px;" /><input type="hidden" value="@ViewData["mainloginid"]" id="X_mainloginid"/><label style="color:white;">@ViewData["frstname"]@ViewData["srname"]</label> <input type="button" class="btn-primery" value="Logout" style="margin-left:50px; height:30px; width:90px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4" style="background-color:silver; width:200px; height:637px; margin-top:0px;">
+                    <img src="@ViewData["profile"]" style="margin-left:5px; margin-top:3px; height: 37px;" /><label style="color:white;">@ViewData["frstname"]@ViewData["srname"]</label><br /><br />
+                    <img src="../../content/images/index.png" style="margin-left:5px; margin-top:3px; height:37px" /> Edit profile<br /></br>
+                    <a href="#"  id="aprovefrnd">Approve friend</a><br />
+                    <a href="#" id="frdserch">FriendSerch</a>
+                </div>
+
+
+             <div class="col-md-7" style="background-color:silver; width:580px;">
+                    <!--<pre  style="width:511px;  margin-top:3px;">&nbsp;</pre><br />-->
+                    <pre id="sch" style="height:150px;"><img src="content/images/index.png"  style="height:37px;" /><a href="#">update Status</a>&nbsp;&nbsp;&nbsp;&nbsp;<img src="content/images/imagess.jpg"  style="height:37px;" /><a href="#">Add  Photos/Vedios </a>&nbsp;&nbsp;&nbsp;&nbsp;<img src="../../Content/index.png" style="height:37px;" />Writes Notes<br />
+                        <img src="@ViewData["profile"]" style="height:37px;" />Whats on your Mind?</pre>
+
+
+                    @*@if (Model == null)
+                    {
+                        <pre style=" height:450px;"></pre>
+                        return;
+                    }
+                    @foreach (var lat in Model)
+                    {  <pre><img src="(lat.X_propic)" style="height:57px;" /><p> @lat.X_Firstname |  @lat.X_Surname| <input type="submit"style="margin-left:330px;" value="Add Friend" /></p></pre>
+                    }*@
+                  <div style="background-color:white; margin-top:4px;"class="fint"/></div>
+                        
+                    
+                </div>
+
+                <div class="col-md-1" style="background-color:Silver; height:693px; width:540px ;">
+                    <pre style="width:420px;"> Your ads
+                    <div style="background-color:Blue; height:470px; width:300px; margin-left:50px;"></div></pre>
+                </div>
+            </div>
+
+        
+    </body>
+</html>
+
